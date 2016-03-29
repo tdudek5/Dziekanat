@@ -1,0 +1,12 @@
+Witajcie,
+
+Bylo by fajnie gdybyœmy wszystkie pliki wrzucali
+do repozytorium nie w zpiach ale luzem
+aby by³o mo¿liwe œledzenie zmian.
+To tyczy siê równie¿ instrukcji, opisów czy diagramów.
+
+Polecam klienta gita:
+https://www.sourcetreeapp.com/
+
+pozdrawiam
+Aneta :)
