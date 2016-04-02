@@ -201,7 +201,7 @@ public class PersonController implements Initializable {
 			System.out.println(student.getPersonId());
 			System.out.println(student.getFirstName());
 			System.out.println(student.getLastName());
-			System.out.println(student.getGrupa());
+			
 
 			session.beginTransaction();
 			student.setFirstName(txtFirstName.getText());

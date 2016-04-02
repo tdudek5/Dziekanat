@@ -10,6 +10,7 @@ import javax.persistence.DiscriminatorValue;
 import javax.persistence.DiscriminatorColumn;
 
 import pl.edu.agh.dziekanat.core.Module;
+import pl.edu.agh.dziekanat.model.GroupStudent;
 
 
 @Entity
@@ -29,7 +30,7 @@ public class Person implements Module {
 	private String nickName;
 	private String email;
 	private String password;
-	
+
 	public static final int moduleID = 1;
 	
 	public int getModuleID() {
@@ -94,5 +95,5 @@ public class Person implements Module {
 		//return personTypeDesc;
 		return PersonType.valueOf(this.getPersonType()).getDescription();
 	}
-
+	
 }

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping>
+  <class name="pl.edu.agh.dziekanat.model.GroupStudent" table="groupstudent">
+    <id name="groupId" column="id">
+      <generator class="pl.edu.agh.dziekanat.core.Sequencer"/>
+    </id>
+    
+    <property name="name" column="nameValue"/>
+    
+    <property name="groupStudentType" column="groupStudentTypeMnemonic">
+    	<type name="org.hibernate.type.EnumType">
+        	<param name="enumClass">pl.edu.agh.dziekanat.model.GroupStudentType</param>
+        	<param name="useNamed">true</param>
+    	</type>
+	</property>
+    
+  </class>
+</hibernate-mapping>
