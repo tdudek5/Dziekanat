@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping>
+  <class name="pl.edu.agh.dziekanat.core.Sequence" table="sequence">
+    <id name="moduleID" column="moduleID">
+      <generator class="assigned"/>
+    </id>
+    <property name="lastID" column="lastID"/>
+  </class>
+</hibernate-mapping>

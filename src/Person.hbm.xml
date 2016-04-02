@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping>
+  <class name="pl.edu.agh.dziekanat.person.Person" table="person">
+    <id name="personId" column="id">
+      <generator class="pl.edu.agh.dziekanat.core.Sequencer"/>
+    </id>
+    
+    <discriminator column="personTypeMnemonic" type="string" />
+    <property name="lastName" column="lastNameValue"/>
+    <property name="firstName" column="firstNameValue"/>
+    <property name="nickName" column="nickNameValue"/>
+    <property name="email" column="emailValue"/>
+    <property name="password" column="passwordValue"/>
+    
+  </class>
+</hibernate-mapping>
