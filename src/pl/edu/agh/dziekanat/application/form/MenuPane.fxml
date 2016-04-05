@@ -23,6 +23,7 @@
       <items>
         <MenuItem fx:id="displayTwo" mnemonicParsing="false" onAction="#switchToTwo" text="Obecności" />
             <MenuItem mnemonicParsing="false" text="Wiadomości" />
+            <MenuItem fx:id="menuGenerateReport" mnemonicParsing="false" onAction="#switchToGenerateReport" text="Wygeneruj raport" />
       </items>
     </Menu>
   </menus>

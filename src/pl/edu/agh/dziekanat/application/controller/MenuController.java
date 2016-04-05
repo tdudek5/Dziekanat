@@ -75,6 +75,23 @@ public class MenuController {
 		}
 
 	}
+	
+	@FXML
+	void switchToGenerateReport(ActionEvent event) {
+
+		try {
+
+			URL panePersonUrl = getClass().getResource("../form/StartPane3.fxml");
+			AnchorPane panePerson = FXMLLoader.load(panePersonUrl);
+
+			BorderPane border = MainApp.getRoot();
+			border.setCenter(panePerson);
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+	}
 
 	@FXML
 	void doHelloWorld(ActionEvent e) {

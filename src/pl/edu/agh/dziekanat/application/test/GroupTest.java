@@ -76,7 +76,7 @@ public class GroupTest {
 	private void przypisz(){
 		session.beginTransaction();
 		GroupStudent groupStudent = (GroupStudent)session.load(GroupStudent.class, 1002);
-		Student student = (Student)session.load(Student.class, 14001);
+		Student student = (Student)session.load(Student.class, 18001);
 		System.out.println(student.getLastName());
 		
 		
