@@ -62,9 +62,9 @@ public class MenuController {
     }
 
     @FXML
-    void switchToEmail(ActionEvent event) {
+    void switchToEmailAction(ActionEvent event) {
         try {
-            URL panePersonUrl = getClass().getResource("/pl/edu/agh/dziekanat/application/form/MailTo.fxml");
+            URL panePersonUrl = getClass().getResource("/pl/edu/agh/dziekanat/application/form/MailToPane.fxml");
             AnchorPane pane = FXMLLoader.load(panePersonUrl);
             BorderPane border = MainApp.getRoot();
             border.setCenter(pane);

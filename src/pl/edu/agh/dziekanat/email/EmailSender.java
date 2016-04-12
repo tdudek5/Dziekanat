@@ -1,5 +1,6 @@
 package pl.edu.agh.dziekanat.email;
 
+import java.util.List;
 import java.util.Properties;
 
 import javax.mail.Message;
@@ -13,14 +14,14 @@ import javax.mail.internet.MimeMessage;
 public class EmailSender {
 
     public static void gmail(
-            String[] to,
+            List<String> to,
             String subject,
             String body) {
         EmailSender.gmail(to, subject, body, "aghmwo2015@gmail.com", "2015mwoagh");
     }
 
     public static void gmail(
-            String[] to,
+            List<String> to,
             String subject,
             String body,
             String from,
@@ -41,11 +42,13 @@ public class EmailSender {
 
         try {
             message.setFrom(new InternetAddress(from));
-            InternetAddress[] toAddress = new InternetAddress[to.length];
+            InternetAddress[] toAddress = new InternetAddress[to.size()];
 
             // To get the array of addresses
-            for (int i = 0; i < to.length; i++) {
-                toAddress[i] = new InternetAddress(to[i]);
+            int index = 0;
+            for (String odbiorca : to) {
+                toAddress[index] = new InternetAddress(to.get(index));
+                index++;
             }
 
             for (int i = 0; i < toAddress.length; i++) {

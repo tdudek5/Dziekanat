@@ -57,9 +57,7 @@ public class LoginController implements Initializable {
             if (login()) {
                 MainApp.showMenu();
                 System.out.println("1");
-
                 URL paneOneUrl = getClass().getResource("/pl/edu/agh/dziekanat/application/form/StartPane.fxml");
-
                 AnchorPane paneOne = FXMLLoader.load(paneOneUrl);
                 BorderPane border = MainApp.getRoot();
                 border.setCenter(paneOne);

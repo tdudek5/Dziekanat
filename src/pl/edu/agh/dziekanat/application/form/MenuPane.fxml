@@ -12,14 +12,14 @@
             <MenuItem mnemonicParsing="false" text="Kierunki" />
             <MenuItem mnemonicParsing="false" text="Semestry" />
             <MenuItem mnemonicParsing="false" text="Przedmioty" />
-            <MenuItem mnemonicParsing="false" text="Email do ..." />
+            <MenuItem mnemonicParsing="false" onAction="#switchToEmailAction" text="Email do ..." />
       </items>
     </Menu>
     <Menu mnemonicParsing="false" text="Prowadzący">
       <items>
         <MenuItem fx:id="displayTwo" mnemonicParsing="false" onAction="#switchToTwo" text="Obecności" />
             <MenuItem mnemonicParsing="false" text="Wiadomości" />
-            <MenuItem fx:id="email1" mnemonicParsing="false" onAction="#switchToEmail" text="Email do ..." />
+            <MenuItem fx:id="email1" mnemonicParsing="false" onAction="#switchToEmailAction" text="Email do ..." />
       </items>
     </Menu>
       <Menu mnemonicParsing="false" text="Studenci">

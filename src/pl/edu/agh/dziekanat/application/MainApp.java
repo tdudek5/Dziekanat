@@ -51,6 +51,10 @@ public class MainApp extends Application {
         primaryStage.setTitle("Menedżer dziekanatu");
         primaryStage.setScene(scene);
         primaryStage.show();
+        primaryStage.setMinWidth(primaryStage.getWidth());
+        primaryStage.setMinHeight(primaryStage.getHeight());
+
+        System.out.println("konieczny raval <koniecznyraval@gmail.com>".replaceAll(".*<(.*?)>", "'$1'"));
     }
 
     public static void main(String[] args) {
