@@ -17,39 +17,39 @@ import pl.edu.agh.dziekanat.person.PersonType;
 @Table(name = "GroupStudent")
 public class GroupStudent implements Module {
 
-	@Id
-	private int groupId;
-	private String name;
-	private GroupStudentType groupStudentType;
+    @Id
+    private int groupId;
+    private String name;
+    private GroupStudentType groupStudentType;
 
-	public static final int moduleID = 2;
+    public static final int moduleID = 2;
 
-	public int getModuleID() {
-		return moduleID;
-	}
+    public int getModuleID() {
+        return moduleID;
+    }
 
-	public int getGroupId() {
-		return groupId;
-	}
+    public int getGroupId() {
+        return groupId;
+    }
 
-	public void setGroupId(int groupId) {
-		this.groupId = groupId;
-	}
+    public void setGroupId(int groupId) {
+        this.groupId = groupId;
+    }
 
-	public String getName() {
-		return name;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public GroupStudentType getGroupStudentType() {
-		return groupStudentType;
-	}
+    public GroupStudentType getGroupStudentType() {
+        return groupStudentType;
+    }
 
-	public void setGroupStudentType(GroupStudentType groupStudentType) {
-		this.groupStudentType = groupStudentType;
-	}
+    public void setGroupStudentType(GroupStudentType groupStudentType) {
+        this.groupStudentType = groupStudentType;
+    }
 
 }

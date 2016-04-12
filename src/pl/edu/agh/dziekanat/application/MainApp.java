@@ -45,7 +45,7 @@ public class MainApp extends Application {
         scene
                 .getStylesheets()
                 .add(getClass()
-                        .getResource("/pl/edu/agh/dziekanat/application/form/application.css")
+                        .getResource("/pl/edu/agh/dziekanat/application/form/css/application.css")
                         .toExternalForm());
 
         primaryStage.setTitle("Menedżer dziekanatu");
@@ -54,7 +54,6 @@ public class MainApp extends Application {
         primaryStage.setMinWidth(primaryStage.getWidth());
         primaryStage.setMinHeight(primaryStage.getHeight());
 
-        System.out.println("konieczny raval <koniecznyraval@gmail.com>".replaceAll(".*<(.*?)>", "'$1'"));
     }
 
     public static void main(String[] args) {

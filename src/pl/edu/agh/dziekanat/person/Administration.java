@@ -6,9 +6,7 @@ import javax.persistence.Entity;
 
 @Entity
 //@Table(name="ADMINISTRATION")
-@DiscriminatorValue(value=PersonType.Values.ADMINISTRATION)
-public class Administration extends Person{
-	
-	
+@DiscriminatorValue(value = PersonType.Values.ADMINISTRATION)
+public class Administration extends Person {
 
 }

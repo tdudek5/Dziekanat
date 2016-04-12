@@ -51,12 +51,11 @@ public class LoginController implements Initializable {
 
     @FXML
     private void loginAction(ActionEvent e) {
+        // Trzeba wymyślij jak to zrobić w osobnym wątku
         lbStatus.setText("trwa logowanie ...");
-
         try {
             if (login()) {
                 MainApp.showMenu();
-                System.out.println("1");
                 URL paneOneUrl = getClass().getResource("/pl/edu/agh/dziekanat/application/form/StartPane.fxml");
                 AnchorPane paneOne = FXMLLoader.load(paneOneUrl);
                 BorderPane border = MainApp.getRoot();

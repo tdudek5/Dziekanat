@@ -9,30 +9,30 @@ import javax.persistence.ManyToOne;
 import pl.edu.agh.dziekanat.model.GroupStudent;
 
 @Entity
-@DiscriminatorValue(value=PersonType.Values.STUDENT)
+@DiscriminatorValue(value = PersonType.Values.STUDENT)
 public class Student extends Person {
-	
-	@ManyToOne
-    @JoinColumn(name="groupId")
-	private GroupStudent groupStudent;
-	
-	@Column(name="albumNumberValue")
-	private String albumNumber;
 
-	public GroupStudent getGroupStudent() {
-		return groupStudent;
-	}
+    @ManyToOne
+    @JoinColumn(name = "groupId")
+    private GroupStudent groupStudent;
 
-	public void setGroupStudent(GroupStudent groupStudent) {
-		this.groupStudent = groupStudent;
-	}
+    @Column(name = "albumNumberValue")
+    private String albumNumber;
 
-	public String getAlbumNumber() {
-		return albumNumber;
-	}
+    public GroupStudent getGroupStudent() {
+        return groupStudent;
+    }
 
-	public void setAlbumNumber(String albumNumber) {
-		this.albumNumber = albumNumber;
-	}
+    public void setGroupStudent(GroupStudent groupStudent) {
+        this.groupStudent = groupStudent;
+    }
+
+    public String getAlbumNumber() {
+        return albumNumber;
+    }
+
+    public void setAlbumNumber(String albumNumber) {
+        this.albumNumber = albumNumber;
+    }
 
 }

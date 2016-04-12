@@ -46,7 +46,7 @@
                         <RowConstraints maxHeight="35.0" minHeight="35.0" prefHeight="35.0" vgrow="SOMETIMES" />
                         <RowConstraints maxHeight="30.0" minHeight="35.0" prefHeight="35.0" vgrow="SOMETIMES" />
                         <RowConstraints minHeight="400.0" vgrow="SOMETIMES" />
-                  <RowConstraints maxHeight="35.0" minHeight="35.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="35.0" minHeight="35.0" prefHeight="35.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                     <children>
                         <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Temat" GridPane.columnIndex="1" />
@@ -55,12 +55,12 @@
                         <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Odbiorcy" GridPane.columnIndex="2" />
                         <ComboBox fx:id="groupsCmb" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#groupsAction" GridPane.rowIndex="1" />
                         <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Osoby:" GridPane.rowIndex="2" />
-                        <ListView fx:id="allPersonsLv" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onMouseClicked="#allPersonsLvClicked" GridPane.rowIndex="3">
+                        <ListView fx:id="availablePersonsLv" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onMouseClicked="#availablePersonsLvClicked" GridPane.rowIndex="3">
                             <GridPane.margin>
                                 <Insets />
                             </GridPane.margin>
                         </ListView>
-                        <ListView fx:id="recipientsLv" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" GridPane.columnIndex="2" GridPane.rowIndex="1" GridPane.rowSpan="3">
+                        <ListView fx:id="recipientsLv" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onMouseClicked="#recipientsLvClicked" GridPane.columnIndex="2" GridPane.rowIndex="1" GridPane.rowSpan="3">
                             <GridPane.margin>
                                 <Insets />
                             </GridPane.margin>
