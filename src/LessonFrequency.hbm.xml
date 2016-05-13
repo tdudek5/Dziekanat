@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping>
+    <class name="pl.edu.agh.dziekanat.model.LessonFrequency" table="lessonFrequency">
+        <id name="lessonFrequencyId" column="id">
+            <generator class="pl.edu.agh.dziekanat.core.Sequencer"/>
+        </id>
+            <property name="lessonId" column="lessonId"/>
+            <property name="personId" column="personId"/>
+            <property name="present" column="presentValue"/>
+        </class>
+        
+        
+</hibernate-mapping>

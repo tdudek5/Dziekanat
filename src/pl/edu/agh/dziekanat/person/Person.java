@@ -10,7 +10,6 @@ import javax.persistence.DiscriminatorValue;
 import javax.persistence.DiscriminatorColumn;
 
 import pl.edu.agh.dziekanat.core.Module;
-import pl.edu.agh.dziekanat.model.GroupStudent;
 
 @Entity
 @Table(name = "Person")
@@ -19,7 +18,6 @@ import pl.edu.agh.dziekanat.model.GroupStudent;
         name = "personTypeMnemonic",
         discriminatorType = DiscriminatorType.STRING
 )
-
 public class Person implements Module {
 
     @Id
@@ -32,6 +30,7 @@ public class Person implements Module {
 
     public static final int moduleID = 1;
 
+    @Override
     public int getModuleID() {
         return moduleID;
     }

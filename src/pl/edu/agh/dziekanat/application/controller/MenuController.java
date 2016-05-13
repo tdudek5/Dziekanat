@@ -27,50 +27,28 @@ public class MenuController {
 
     @FXML
     void switchToOne(ActionEvent event) {
-        try {
-            URL paneOneUrl = getClass().getResource("/pl/edu/agh/dziekanat/application/form/EmptyPane.fxml");
-            AnchorPane paneOne = FXMLLoader.load(paneOneUrl);
-            BorderPane border = MainApp.getRoot();
-            border.setCenter(paneOne);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        this.switchTo("/pl/edu/agh/dziekanat/application/form/EmptyPane.fxml");
+    }
+
+    @FXML
+    void switchToLessonFrequency(ActionEvent event) {
+        this.switchTo("/pl/edu/agh/dziekanat/application/form/LessonFrequencyPane.fxml");
     }
 
     @FXML
     void switchToTwo(ActionEvent event) {
-        try {
-            URL paneTwoUrl = getClass().getResource("/pl/edu/agh/dziekanat/application/form/EmptyPane.fxml");
-            AnchorPane paneTwo = FXMLLoader.load(paneTwoUrl);
-            BorderPane border = MainApp.getRoot();
-            border.setCenter(paneTwo);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        this.switchTo("/pl/edu/agh/dziekanat/application/form/EmptyPane.fxml");
     }
 
     @FXML
     void switchToMaintainPerson(ActionEvent event) {
-        try {
-            URL panePersonUrl = getClass().getResource("/pl/edu/agh/dziekanat/application/form/PersonPane.fxml");
-            AnchorPane panePerson = FXMLLoader.load(panePersonUrl);
-            BorderPane border = MainApp.getRoot();
-            border.setCenter(panePerson);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        this.switchTo("/pl/edu/agh/dziekanat/application/form/PersonPane.fxml");
     }
 
     @FXML
     void switchToEmailAction(ActionEvent event) {
-        try {
-            URL panePersonUrl = getClass().getResource("/pl/edu/agh/dziekanat/application/form/MailToPane.fxml");
-            AnchorPane pane = FXMLLoader.load(panePersonUrl);
-            BorderPane border = MainApp.getRoot();
-            border.setCenter(pane);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        this.switchTo("/pl/edu/agh/dziekanat/application/form/MailToPane.fxml");
+
     }
 
     @FXML
@@ -78,4 +56,14 @@ public class MenuController {
         System.out.println("Hello World");
     }
 
+    private void switchTo(String resource) {
+        try {
+            URL panePersonUrl = getClass().getResource(resource);
+            AnchorPane pane = FXMLLoader.load(panePersonUrl);
+            BorderPane border = MainApp.getRoot();
+            border.setCenter(pane);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }

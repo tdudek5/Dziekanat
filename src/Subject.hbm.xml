@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping>
+    <class name="pl.edu.agh.dziekanat.model.Subject" table="subject">
+        <id name="subjectId" column="id">
+            <generator class="pl.edu.agh.dziekanat.core.Sequencer"/>
+        </id>
+        <property name="name" column="nameValue"/>
+        <property name="shortcut" column="shortcutValue"/>
+    </class>
+</hibernate-mapping>

@@ -35,4 +35,9 @@ public class Student extends Person {
         this.albumNumber = albumNumber;
     }
 
+    @Override
+    public String toString() {
+        return this.getFirstName() + " " + this.getLastName() + " (" + this.getAlbumNumber() + ")";
+    }
+
 }

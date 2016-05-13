@@ -1,17 +1,10 @@
 package pl.edu.agh.dziekanat.model;
 
-import java.util.Set;
-
-import javax.persistence.Column;
-import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 import pl.edu.agh.dziekanat.core.Module;
-import pl.edu.agh.dziekanat.person.PersonType;
 
 @Entity
 @Table(name = "GroupStudent")
@@ -50,6 +43,11 @@ public class GroupStudent implements Module {
 
     public void setGroupStudentType(GroupStudentType groupStudentType) {
         this.groupStudentType = groupStudentType;
+    }
+
+    @Override
+    public String toString() {
+        return "GroupStudent{" + "groupId=" + groupId + ", name=" + name + ", groupStudentType=" + groupStudentType.toString() + '}';
     }
 
 }

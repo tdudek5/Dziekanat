@@ -26,10 +26,6 @@ public class Sequencer implements IdentifierGenerator {
             moduleID = ((Module) arg1).getModuleID();
         }
 
-//		Query query = session.createQuery("FROM Sequence where moduleID = " + String.valueOf(moduleID));
-//		List sequences = query.list();
-//		Sequence sequence = (Sequence) sequences.get(0);
-//		
         Sequence sequence = (Sequence) session.load(Sequence.class, moduleID);
 
         sequence.setLastID(sequence.getLastID() + 1);
@@ -37,8 +33,6 @@ public class Sequencer implements IdentifierGenerator {
         session.save(sequence);
         session.getTransaction().commit();
 
-        //sequence.getLastID() + "" + moduleID/1000
-        //float result = (float)sequence.getLastID() + (float)moduleID/1000;
         String formattedModuleID = String.format("%03d", moduleID);
 
         int oid = Integer.valueOf(sequence.getLastID() + formattedModuleID);

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping>
+    <class name="pl.edu.agh.dziekanat.model.Lesson" table="lesson">
+        <id name="lessonId" column="id">
+            <generator class="pl.edu.agh.dziekanat.core.Sequencer"/>
+        </id>
+        <property name="subject" column="subjectId"/>
+         <property name="description" column="descriptionValue"/>
+        <property name="startDate" column="startDateValue"/>
+        <property name="duration" column="durationValue"/>
+        <property name="classroom" column="classroomValue" />
+        <property name="groupStudent" column="groupStudentId"/>
+        <property name="prowadzacy" column="prowadzacyId"/>
+    </class>
+</hibernate-mapping>

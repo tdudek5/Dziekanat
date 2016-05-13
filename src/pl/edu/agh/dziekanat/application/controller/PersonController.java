@@ -163,17 +163,15 @@ public class PersonController implements Initializable {
         return personList;
     }
 
-    static public ObservableList<Person> getPersons() {
+    static public List<Person> getPersons() {
         BusinessSessionFactory bsf = BusinessSessionFactory.getInstance();
         Session session = bsf.getSession().openSession();
-
-        ObservableList<Person> persons = FXCollections.observableArrayList();
-
+        
         List<Person> pList = session.createCriteria(Person.class).list();
-        persons.setAll(pList);
+        
         session.close();
         bsf.close();
-        return persons;
+        return pList;
     }
 
     @FXML

@@ -10,8 +10,6 @@ import javafx.scene.control.MenuBar;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
-import pl.edu.agh.dziekanat.email.EmailSender;
-import pl.edu.agh.dziekanat.person.PersonUtil;
 
 public class MainApp extends Application {
 
@@ -54,6 +52,7 @@ public class MainApp extends Application {
         primaryStage.setMinWidth(primaryStage.getWidth());
         primaryStage.setMinHeight(primaryStage.getHeight());
 
+        
     }
 
     public static void main(String[] args) {

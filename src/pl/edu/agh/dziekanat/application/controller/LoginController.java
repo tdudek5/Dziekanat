@@ -1,7 +1,5 @@
 package pl.edu.agh.dziekanat.application.controller;
 
-import java.io.IOException;
-import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -26,6 +24,9 @@ import pl.edu.agh.dziekanat.person.PersonUtil;
 
 import java.io.IOException;
 import java.net.URL;
+
+import pl.edu.agh.dziekanat.model.Lesson;
+import pl.edu.agh.dziekanat.person.Logged;
 
 public class LoginController implements Initializable {
 
@@ -77,7 +78,8 @@ public class LoginController implements Initializable {
         boolean loginStatus = false;
         BusinessSessionFactory bsf = BusinessSessionFactory.getInstance();
         Session session = bsf.getSession().openSession();
-        Query query = session.createQuery("FROM Person where nickName =:nickName");
+        String hql = "FROM pl.edu.agh.dziekanat.person.Person where nickName =:nickName";
+        Query query = session.createQuery(hql);
         query.setString("nickName", login.getText());
         List<Person> persons = query.list();
 
@@ -85,6 +87,8 @@ public class LoginController implements Initializable {
             Person person = persons.get(0);
             if (person != null && person.getPassword().equals(PersonUtil.getHashedPassword(password.getText()))) {
                 loginStatus = true;
+                Logged.getInstance().setLogged(person);
+                 System.out.println(Logged.getInstance().getLogged());
             } else {
                 lbStatus.setText("Niepoprawne hasło!");
             }
@@ -94,6 +98,18 @@ public class LoginController implements Initializable {
         session.close();
         bsf.close();
         return loginStatus;
+
+    }
+
+    private void test() {
+        BusinessSessionFactory bsf = BusinessSessionFactory.getInstance();
+        Session session = bsf.getSession().openSession();
+        String hql = "FROM pl.edu.agh.dziekanat.model.Lesson where prowadzacy =:prowadzacy";
+        Query query = session.createQuery(hql);
+        query.setString("prowadzacy", "12001");
+        List<Lesson> lessons = query.list();
+        session.close();
+        bsf.close();
 
     }
 

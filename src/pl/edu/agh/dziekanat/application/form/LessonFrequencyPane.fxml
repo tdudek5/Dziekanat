@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="LessonFrequencyPane" minHeight="768.0" minWidth="1024.0" prefHeight="768.0" prefWidth="1024.0" stylesheets="@css/LessonFrequencyPane.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.edu.agh.dziekanat.application.controller.LessonFrequencesController">
+    <children>
+        <BorderPane prefHeight="768.0" prefWidth="1024.0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="25.0">
+            <center>
+                <GridPane hgap="10.0" prefHeight="593.0" prefWidth="973.0" vgap="10.0" BorderPane.alignment="CENTER">
+                    <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="400.0" minWidth="200.0" prefWidth="200.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="400.0" minWidth="200.0" prefWidth="200.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="778.0" minWidth="200.0" prefWidth="755.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="25.0" minHeight="25.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="25.0" minHeight="25.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="800.0" minHeight="200.0" prefHeight="300.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="25.0" minHeight="25.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="25.0" minHeight="25.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <Label text="Lekcja" GridPane.columnSpan="2" />
+                        <ComboBox fx:id="selectLessonCb" onAction="#selectLessonAction" prefHeight="31.0" prefWidth="814.0" GridPane.columnIndex="1" GridPane.columnSpan="3" />
+                  <ListView fx:id="absentLv" onMouseClicked="#absentLvClicked" prefHeight="400.0" prefWidth="400.0" GridPane.rowIndex="2" />
+                  <ListView fx:id="presentLv" onMouseClicked="#presentLvClicked" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <Label text="Nieobecni" GridPane.rowIndex="1" />
+                  <Label text="Obecni" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <Button fx:id="setPresentBtn" minHeight="25.0" minWidth="200.0" mnemonicParsing="false" onAction="#setPresentAction" text="&gt;&gt;&gt;" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.valignment="TOP" />
+                  <Button fx:id="setAbsentBtn" minHeight="25.0" minWidth="200.0" mnemonicParsing="false" onAction="#setAbsentAction" text="&lt;&lt;&lt;" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" />
+                    </children>
+                </GridPane>
+            </center>
+            <top>
+                <Label text="Lista obecności" BorderPane.alignment="CENTER">
+                    <font>
+                        <Font name="System Bold" size="30.0" />
+                    </font>
+                </Label>
+            </top>
+            <bottom>
+                <Button fx:id="saveBtn" maxHeight="32.0" maxWidth="100.0" minHeight="32.0" minWidth="100.0" mnemonicParsing="false" onAction="#saveAction" prefHeight="32.0" prefWidth="100.0" text="Zapisz" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets bottom="12.0" />
+               </BorderPane.margin></Button>
+            </bottom>
+        </BorderPane>
+    </children>
+</AnchorPane>

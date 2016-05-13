@@ -13,6 +13,7 @@ public enum GroupStudentType {
         this.description = description;
     }
 
+    @Override
     public String toString() {
         return name();
     }
@@ -23,6 +24,10 @@ public enum GroupStudentType {
 
     public String getDescription() {
         return description;
+    }
+
+    public String getDescriptionEx() {
+        return description + " " + name();
     }
 
     public static List<GroupStudentType> toList() {
